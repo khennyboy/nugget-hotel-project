@@ -3,16 +3,14 @@ import GuestFooter from "../component/GuestFooter";
 import { roomTypes } from "../mock/data";
 
 export default function HomePage() {
-  const featured = roomTypes.slice(0, 3);
-
   return (
     <div className="bg-paper">
       <GuestNav />
-      <div className="min-h-dvh grid gap-6 content-center  bg-linear-to-b from-ink to-ink2 text-sand pb-32 px-3 ">
+      <div className="min-h-dvh grid gap-6 content-center  bg-linear-to-b from-ink to-ink2 text-sand pb-32 px-4 md:px-12 ">
         <div className="font-mono text-[11px] tracking-[0.18em] uppercase text-brassLight ">
           Birnin Kebbi · est. hospitality
         </div>
-        <h1 className="font-display text-3xl  leading-[1.06] font-semibold max-w-180 ">
+        <h1 className="font-display text-3xl md:text-4xl  leading-[1.06] font-semibold max-w-180 ">
           Rest well, eat well,{" "}
           <em className="italic text-brassLight">see more</em> of Kebbi.
         </h1>
@@ -21,30 +19,31 @@ export default function HomePage() {
           continental standard, across every Nugget branch.
         </p>
         <div className="flex gap-3.5">
-          <button className="bg-brass text-[#241704] px-4 py-3.5 rounded-md font-semibold text-sm hover:bg-brassLight transition-colors">
+          <button className="bg-brass text-[#241704] px-4 py-3 rounded-md font-semibold text-sm hover:bg-brassLight transition-colors">
             Check availability
           </button>
-          <button className="bg-transparent text-sand border border-[#4A5278] px-4 py-3.5 rounded-md font-semibold text-sm hover:border-brassLight transition-colors">
+          <button className="bg-transparent text-sand border border-[#4A5278] px-4 py-3 rounded-md font-semibold text-sm hover:border-brassLight transition-colors">
             View tour packages
           </button>
         </div>
       </div>
 
-      <div className="px-3 py-10">
-        <div className="font-mono text-[11px] tracking-[0.16em] uppercase text-brass mb-3.5">
+      <div className="px-4 md:px-8 py-10">
+        <div className="font-mono text-[11px] text-center tracking-[0.16em] uppercase text-brass mb-3.5">
           Accommodation
         </div>
-        <h2 className="font-display text-xl font-semibold max-w-140 mb-8">
+        <h2 className="font-display text-xl font-semibold  mb-8 text-center text-balance">
           Rooms built for a long journey and a short one.
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {featured.map((room) => (
+          {roomTypes.map((room) => (
             <div
               key={room.id}
               className="bg-white border border-line rounded-card  hover:shadow-lg transition-shadow"
             >
               <div className="h-45 bg-linear-to-br from-[#2C3454] to-ink relative">
                 <img
+                  loading="lazy"
                   src="/nugget-room-400w.webp"
                   srcSet="
                         /nugget-room-400w.webp 400w,

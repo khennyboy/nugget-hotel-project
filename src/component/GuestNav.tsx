@@ -1,13 +1,14 @@
-import { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
-import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "motion/react";
+import { useState } from "react";
+import { FaTimes } from "react-icons/fa";
+import { HiBars3BottomLeft } from "react-icons/hi2";
+import { Link } from "react-router-dom";
 
 export default function GuestNav() {
   const [openNav, setOpenNav] = useState<boolean>(false);
 
   return (
-    <div className="sticky top-0 z-50 flex items-center justify-between px-3 py-3 bg-ink text-sand">
+    <div className="sticky top-0 z-50 flex items-center justify-between px-4 md:px-8 shadow-[0_4px_10px_rgba(0,0,0,0.35)] py-3 bg-ink text-sand">
       <div className="flex items-start grow">
         <img
           src="/nugget-logo.webp"
@@ -28,7 +29,7 @@ export default function GuestNav() {
       </div>
 
       {/* Mobile menu button */}
-      <FaBars
+      <HiBars3BottomLeft
         className="size-6 md:hidden cursor-pointer"
         onClick={() => setOpenNav(true)}
       />
@@ -73,8 +74,8 @@ export default function GuestNav() {
               duration: 0.4,
               scale: {
                 type: "spring",
-                visualDuration: 0.4,
-                bounce: 0.5,
+                visualDuration: 0.2,
+                bounce: 0.2,
               },
             }}
             className="fixed inset-0 bg-brass min-h-dvh z-40 overflow-hidden md:hidden"
@@ -103,14 +104,14 @@ export default function GuestNav() {
               <Link
                 to="/book"
                 onClick={() => setOpenNav(false)}
-                className="bg-primary-light text-brass px-6.5 py-3.5 rounded-md font-semibold text-sm hover:bg-brassLight transition-colors"
+                className="bg-primary-light text-brass px-6.5 py-3.5 rounded-md font-semibold text-sm  transition-colors"
               >
                 Book now
               </Link>
             </div>
 
             <FaTimes
-              className="size-7 absolute right-6 top-6 cursor-pointer"
+              className="size-8 absolute right-6 top-6 cursor-pointer"
               onClick={() => setOpenNav(false)}
             />
           </motion.div>
