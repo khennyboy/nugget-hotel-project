@@ -24,17 +24,17 @@ const Rooms = () => {
           </div>
           <div className="px-5.5 pt-5 pb-6">
             <h3 className="font-display text-xl mb-1.5">
-              {roomTypes.find((each) => each.id == room.roomTypeId).name}
+              {roomTypes.find((each) => each.id == room.roomTypeId)?.name}
             </h3>
             <p className="text-[13px] text-textMute mb-4 leading-relaxed">
-              {roomTypes.find((each) => each.id == room.roomTypeId).desc}
+              {roomTypes.find((each) => each.id == room.roomTypeId)?.desc}
             </p>
             <div className="flex justify-between items-center border-t border-line pt-3.5">
               <div className="font-mono text-base font-semibold">
                 ₦{" "}
                 {roomTypes
                   .find((each) => each.id == room.roomTypeId)
-                  .price.toLocaleString()}
+                  .price?.toLocaleString()}
                 <small className="font-body text-[11px] text-textMute font-normal">
                   {" "}
                   /night
