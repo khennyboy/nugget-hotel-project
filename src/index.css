@@ -42,3 +42,9 @@
 
   --radius-card: 14px;
 }
+
+@layer base {
+  button {
+    @apply cursor-pointer;
+  }
+}
