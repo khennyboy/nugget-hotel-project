@@ -9,11 +9,11 @@ export default function Nav() {
 
   return (
     <div className="fixed inset-x-0 top-0 z-50 flex items-center justify-between px-4 md:px-8 shadow-[0_4px_10px_rgba(0,0,0,0.35)] py-3 bg-ink text-sand">
-      <div className="flex grow items-start">
+      <div className="flex grow items-center">
         <img
           src="/nugget-logo.webp"
           alt="nugget_company_logo"
-          className="w-8 aspect-square object-contain "
+          className="w-8 aspect-square object-contain"
         />
 
         <Link
