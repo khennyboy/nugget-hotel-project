@@ -9,16 +9,16 @@ export default function Nav() {
 
   return (
     <div className="fixed inset-x-0 top-0 z-50 flex items-center justify-between px-4 md:px-8 shadow-[0_4px_10px_rgba(0,0,0,0.35)] py-3 bg-ink text-sand">
-      <div className="flex items-start grow">
+      <div className="flex grow items-start">
         <img
           src="/nugget-logo.webp"
           alt="nugget_company_logo"
-          className="w-8 aspect-square object-contain"
+          className="w-8 aspect-video object-contain "
         />
 
         <Link
           to="/"
-          className="font-display font-semibold tracking-tight leading-[1.1]"
+          className="font-display font-semibold  tracking-tight leading-[1.1] "
         >
           Nugget{" "}
           <span className="text-brassLight">
