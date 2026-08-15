@@ -2,12 +2,11 @@ import Footer from "@/component/Footer";
 import Nav from "@/component/Navbar";
 import Rooms from "@/component/Rooms";
 
-
 export default function HomePage() {
   return (
     <div>
-      <Nav/>
-      <div className="min-h-dvh grid grid-cols-1 md:grid-cols-2 gap-6 content-center bg-linear-to-b from-ink to-ink2 bg-yellow-400 text-sand px-4 md:px-12">
+      <Nav />
+      <div className="min-h-dvh grid grid-cols-1 md:grid-cols-2 gap-6 items-center bg-linear-to-b from-ink to-ink2 bg-yellow-400 text-sand px-4 md:px-12">
         <div className="flex gap-3 items-center md:items-start flex-col">
           <div className="font-mono text-[11px] tracking-[0.18em] uppercase text-brassLight">
             Birnin Kebbi · est. hospitality
@@ -31,7 +30,7 @@ export default function HomePage() {
         </div>
 
         {/* Overlapping rotated image stack — large screens only */}
-        <div className="hidden md:block justify-self-center relative md:w-60 md:h-70 lg:w-80 lg:h-100">
+        <div className="hidden md:block justify-self-center relative w-80 h-80">
           <img
             loading="lazy"
             src="/nugget-homepage-400.webp"
@@ -42,7 +41,7 @@ export default function HomePage() {
       "
             sizes="33vw"
             alt="Nugget Continental room"
-            className="absolute   w-64 h-80 object-cover rounded-xl shadow-2xl border-4 border-white -rotate-12 -translate-x-5 z-10"
+            className="absolute w-64 h-80 object-cover rounded-xl shadow-2xl border-4 border-white -rotate-12 -translate-x-5 z-10"
           />
           <img
             loading="lazy"
