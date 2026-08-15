@@ -1,11 +1,16 @@
-import Footer from "@/component/Footer";
-import Nav from "@/component/Navbar";
 import Rooms from "@/component/Rooms";
+import { Helmet } from "react-helmet-async";
 
 export default function HomePage() {
   return (
     <div>
-      <Nav />
+      <Helmet>
+        <title>Nugget Continental Hotel & Tours</title>
+        <meta
+          name="description"
+          content="Book comfortable rooms and tours at Nugget Continental Hotel."
+        />
+      </Helmet>
       <div className="min-h-dvh grid grid-cols-1 md:grid-cols-2 gap-6 items-center bg-linear-to-b from-ink to-ink2 bg-yellow-400 text-sand px-4 md:px-12">
         <div className="flex gap-3 items-center md:items-start flex-col">
           <div className="font-mono text-[11px] tracking-[0.18em] uppercase text-brassLight">
@@ -78,7 +83,6 @@ export default function HomePage() {
         </h2>
       </div>
       <Rooms />
-      <Footer />
     </div>
   );
 }

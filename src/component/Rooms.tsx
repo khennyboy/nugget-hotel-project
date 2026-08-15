@@ -1,15 +1,16 @@
 import { rooms, roomTypes } from "@/mock/data";
+import { Link } from "react-router-dom";
 
 const Rooms = () => {
   return (
+    
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 md:px-12 mb-10">
       {rooms.map((room) => {
-        const roomType = roomTypes.find(
-          (each) => each.id === room.roomTypeId
-        );
+        const roomType = roomTypes.find((each) => each.id === room.roomTypeId);
 
         return (
-          <div
+          <Link
+            to={`/room/${room.number}`}
             key={room.number}
             className="overflow-hidden bg-white border border-line rounded-card hover:shadow-lg transition-shadow"
           >
@@ -29,9 +30,7 @@ const Rooms = () => {
             </div>
 
             <div className="px-5.5 pt-5 pb-6">
-              <h3 className="font-display text-xl mb-1.5">
-                {roomType?.name}
-              </h3>
+              <h3 className="font-display text-xl mb-1.5">{roomType?.name}</h3>
 
               <p className="text-[13px] text-textMute mb-4 leading-relaxed">
                 {roomType?.desc}
@@ -40,7 +39,6 @@ const Rooms = () => {
               <div className="flex justify-between items-center border-t border-line pt-3.5">
                 <div className="font-mono text-base font-semibold">
                   ₦ {roomType?.price?.toLocaleString()}
-
                   <small className="font-body text-[11px] text-textMute font-normal">
                     {" "}
                     /night
@@ -55,7 +53,7 @@ const Rooms = () => {
                 </a>
               </div>
             </div>
-          </div>
+          </Link>
         );
       })}
     </div>
