@@ -13,7 +13,7 @@ export default function Nav() {
         <img
           src="/nugget-logo.webp"
           alt="nugget_company_logo"
-          className="w-8 aspect-video object-contain "
+          className="w-8 aspect-square object-contain "
         />
 
         <Link
