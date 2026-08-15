@@ -1,12 +1,12 @@
+import Footer from "@/component/Footer";
 import Rooms from "@/component/Rooms";
-import GuestFooter from "../component/GuestFooter";
-import GuestNav from "../component/GuestNav";
+import Nav from "@/component/nav";
 
 export default function HomePage() {
   return (
     <div>
-      <GuestNav />
-      <div className="min-h-dvh grid grid-cols-1 md:grid-cols-2 gap-6 content-center bg-linear-to-b from-ink to-ink2 text-sand px-4 md:px-12">
+      <Nav />
+      <div className="min-h-dvh grid grid-cols-1 md:grid-cols-2 gap-6 content-center bg-linear-to-b from-ink to-ink2 bg-yellow-400 text-sand px-4 md:px-12">
         <div className="flex gap-3 items-center md:items-start flex-col">
           <div className="font-mono text-[11px] tracking-[0.18em] uppercase text-brassLight">
             Birnin Kebbi · est. hospitality
@@ -78,7 +78,7 @@ export default function HomePage() {
         </h2>
       </div>
       <Rooms />
-      <GuestFooter />
+      <Footer />
     </div>
   );
 }

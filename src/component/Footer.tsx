@@ -12,7 +12,7 @@ interface GuestFooterProps {
   rightText?: string;
 }
 
-export default function GuestFooter({
+export default function Footer({
   rightText = "Birnin Kebbi · Lagos (opening) · Kaduna (opening)",
 }: GuestFooterProps) {
   return (

@@ -4,11 +4,11 @@ import { FaTimes } from "react-icons/fa";
 import { HiBars3BottomLeft } from "react-icons/hi2";
 import { Link } from "react-router-dom";
 
-export default function GuestNav() {
+export default function Nav() {
   const [openNav, setOpenNav] = useState<boolean>(false);
 
   return (
-    <div className="sticky top-0 z-50 flex items-center justify-between px-4 md:px-8 shadow-[0_4px_10px_rgba(0,0,0,0.35)] py-3 bg-ink text-sand">
+    <div className="fixed inset-x-0 top-0 z-50 flex items-center justify-between px-4 md:px-8 shadow-[0_4px_10px_rgba(0,0,0,0.35)] py-3 bg-ink text-sand">
       <div className="flex items-start grow">
         <img
           src="/nugget-logo.webp"
